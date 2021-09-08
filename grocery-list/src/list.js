@@ -5,9 +5,8 @@ class List extends Component {
     render() {
         return (
             <div>
-                {/* <Items/> */}
+                Fill in the sections below to add item to list:
                 <AddingItem/>
-                <h3> Items</h3>
             </div>
         )
     }
