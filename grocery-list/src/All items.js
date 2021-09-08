@@ -1,7 +1,12 @@
 import React, { Component } from 'react';
 
 class Items extends Component{
-    state ={ groceries: [
+   state ={
+        item: '',
+        units: '',
+        quantity: '',
+        isPurchased: false, 
+        groceries: [
         {
            item: 'apples',
            units: 'ea',
@@ -30,9 +35,9 @@ class Items extends Component{
 
 export default Items
 
-let newItems = {
-    item: this.state.item,
-    units: this.state.units,
-    quantity: this.state.quantity,
-    isPurchased: true
-}
+// let newItems = {
+//     item: this.state.item,
+//     units: this.state.units,
+//     quantity: this.state.quantity,
+//     isPurchased: true
+// }
