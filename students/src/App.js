@@ -68,6 +68,7 @@ function App() {
   ]);
   return (
   <div className="App">
+    <h1>Students</h1>
     {students.map((student, index) => (
       <Student student={student} key={index} />
     ))}

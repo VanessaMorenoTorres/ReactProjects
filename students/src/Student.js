@@ -3,9 +3,10 @@ import Score from "./Score";
 
 function Student(props){
     return(
-        <div>
+        <div className="studentInfo">
             <h3>{props.student.name}</h3>
             <p>{props.student.bio}</p>
+            <h4>Test Dates and Scores</h4>
             <p>{props.student.scores.map((scores, index) => (
                 <Score score={scores} key={index} />
             ))}

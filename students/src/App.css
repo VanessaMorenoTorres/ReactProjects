@@ -1,7 +1,14 @@
 
 .App {
   text-align: center;
-  background-color: lightskyblue;
-  margin: 0;
+  margin: 30px;
+  gap: 10px;
 }
-
+.studentInfo{
+  border: solid black 2.5px;
+  padding-right: 50px;
+  padding-left: 50px;
+  margin: 20px;
+  background-color: rgba(255, 182, 193, 0.884);
+  
+}
