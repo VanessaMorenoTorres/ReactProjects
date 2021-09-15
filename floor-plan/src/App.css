@@ -1,14 +1,40 @@
+*{
+  color: aliceblue;
+
+}
 .App {
   text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+  background-color: blue;
 }
 
 div {
   border: 1px solid grey;
   margin: 5px;
   padding: 5px;
+}
+.FloorPlan{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat( 3, 1fr);
+  background-color: blue;
+
+}
+.Sink{
+  background-color: grey;
+}
+.Kitchen{
+  background-color: orange;
+}
+.LivingRoom{
+  background-color: palevioletred;
+
+}
+.Bath{
+  background-color: lightskyblue;
+}
+.Oven{
+  background-color: red;
+}
+.Bedroom{
+  background-color: mediumpurple;
 }
