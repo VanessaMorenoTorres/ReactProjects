@@ -5,15 +5,15 @@ import "./App.css";
 function App() {
   const [task, setTask] = useState([
     {
-      listItem: "Laundry ",
+      listItem: "Laundry",
       completed: false,
     },
     {
-      listItem: "Wash Dishes ",
+      listItem: "Wash Dishes",
       completed: false,
     },
     {
-      listItem: "Get Groceries ",
+      listItem: "Get Groceries",
       completed: false,
     },
   ]);
@@ -31,36 +31,29 @@ function App() {
       completed: false,
     };
     setTask(task.concat(formInput));
+    e.target.reset();
   };
-  // const handleChange = (e) => {
-  //   setTask(e.target.value);
-  // };
-
-  // const AddTask = () => {
-  //   if (task !== "") {
-  //     const taskDetails = {
-  //       listItem: AddItemRef.current.value,
-  //       completed: false,
-  //     }
-  //     // setTaskList([...tasklist, taskDetails])
-  //     setTaskList(tasklist.concat(task))
-  //   }
-  // };
-
-  // console.log("tasklist", tasklist);
 
   const deletetask = (id) => {
-    console.log(id)
     setTask(task.filter((i, index) => index !== id));
-
   };
 
   return (
     <div id="App">
       <div>
-        <h1>To Do</h1>
+        <h1>To-Do List:</h1>
+        <p>
+          Enter tasks below to add to your To-Do list. Once you have completed a
+          task, click the "Remove" button to erase it from your list.
+        </p>
         <form onSubmit={handleSubmit}>
-          <input id="addItem" ref={addItemRef} type="text" />
+          <input
+            id="addItem"
+            ref={addItemRef}
+            type="text"
+            placeholder="enter task here"
+            required
+          />
           <button>Add to List</button>
         </form>
       </div>
@@ -69,12 +62,9 @@ function App() {
           list.completed === false ? (
             <ul key={index}>
               <li>
-                {list.listItem}
-                {/* {list.addItem} */}
-                <button className="delete"
-                  onClick={() => deletetask(index)}>
-
-                  Delete
+                {list.listItem + "  "}
+                <button className="delete" onClick={() => deletetask(index)}>
+                  Remove
                 </button>
               </li>
             </ul>
@@ -83,53 +73,6 @@ function App() {
       </div>
     </div>
   );
-  // const taskCompleted = (e, listItem) => {
-  //   e.preventDefault();
-  //   const element = tasklist.findIndex((elem) => elem.listItem == listItem);
-  //   const newTaskList = [...tasklist];
-  //   const newTaskList[element] = {
-  //     ...newTaskList[element],
-  //     completed: true,
-  //   }
-  //   setTaskList(newTaskList);
-  // }
-
-  // return (
-  //   <div className="App">
-  //     <h1 className="title">To Do</h1>
-  //     <form className="addItemsForm" onSubmit={handleSubmit}>
-  //       <input
-  //         type="text"
-  //         name="text"
-  //         placeholder="Type additional tasks here"
-  //         ref={addItemRef}
-  //         onChange={(e) => handleChange(e)}
-  //       ></input>
-  //       <button className="addBtn" type="submit" onClick={AddTask}>
-  //         Add Item
-  //       </button>
-  //     </form>
-  //     <br />
-  //     {tasklist !== [] ? (
-  //       <ul>
-  //         {tasklist.map((t) => (
-  //           <li className={t.completed ? "crossText" : "listItem"} >
-  //             {t.listItem }
-  //             {/* <button className="completed" onClick={(e) => taskCompleted(e, t.listItem)}>
-  //               Completed
-  //             </button> */}
-  //             <button
-  //               className="delete"
-  //               onClick={(e) => deletetask(e, t.listItem)}
-  //             >
-  //               Delete
-  //             </button>
-  //           </li>
-  //         ))}
-  //       </ul>
-  //     ) : null}
-  //   </div>
-  // );
 }
 
 export default App;

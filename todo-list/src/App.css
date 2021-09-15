@@ -1,16 +1,10 @@
-body{
-  background-color: cornflowerblue;
-}
 #App {
   text-align: center;
-  justify-content: center;
-  border: 5px solid black;
-  margin: 40px;
-  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  border: 3.5px solid black;
+  margin: 30px;
+  padding: 60px;
+  background-color: lightyellow;
+  align-items: center;
 }
-/* ul{
-  list-style-type:none,
-} */
-/* li{
-  list-style-type: none;
-} */
