@@ -1,40 +1,60 @@
-*{
-  color: aliceblue;
-
+* {
+  color: rgb(0, 0, 0);
 }
+
+body {
+  display: flex;
+  justify-content: center;
+}
+
 .App {
   text-align: center;
-  background-color: blue;
+  background-color: lightpink;
+  max-width: 700px;
 }
 
 div {
-  border: 1px solid grey;
+  /* border: 1px solid aliceblue; */
+  border: 1px solid black;
   margin: 5px;
   padding: 5px;
 }
-.FloorPlan{
+
+.FloorPlan {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat( 3, 1fr);
-  background-color: blue;
-
-}
-.Sink{
-  background-color: grey;
-}
-.Kitchen{
-  background-color: orange;
-}
-.LivingRoom{
-  background-color: palevioletred;
-
-}
-.Bath{
+  grid-template-rows: repeat(3, 1fr);
   background-color: lightskyblue;
+  padding: 40px;
+  margin: 40px;
 }
-.Oven{
-  background-color: red;
+
+.Sink {
+  background-color: lightslategray;
 }
-.Bedroom{
+
+.Kitchen {
+  background-color: rgb(250, 115, 135);
+  grid-area: 1/3/3/3;
+}
+
+.LivingRoom {
+  background-color: palevioletred;
+  grid-area: 1/1/2/3;
+}
+
+.Bath {
+  background-color: rgb(10, 158, 250);
+}
+
+.Full {
+  grid-area: 3/1/4/2;
+}
+
+.Oven {
+  background-color: lightseagreen;
+}
+
+.Bedroom {
   background-color: mediumpurple;
 }

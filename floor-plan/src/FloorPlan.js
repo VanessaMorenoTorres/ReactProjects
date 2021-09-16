@@ -10,8 +10,8 @@ function FloorPlan(){
         <LivingRoom/>
         <Kitchen/>
         <Bedroom bedNum='1' />
-        <Bath size='Full' />
         <Bedroom bedNum='2' />
+        <Bath size='Full' className="Full" />
         <Bedroom bedNum='3' />
         <Bath size='Half' />
     </div>
